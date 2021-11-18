@@ -8,8 +8,8 @@ if __name__ == "__main__":
         print("{:d}".format(int(sys.argv[1])), end="")
         print('')
     else:
-        sum = 0
+        totalsum = 0
         for i in range(1, len(sys.argv)):
-            sum += int(sys.argv[i])
-        print("{:d}".format(sum), end="")
+            totalsum += int(sys.argv[i])
+        print("{:d}".format(totalsum), end="")
         print('')
