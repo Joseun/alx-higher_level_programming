@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+def new_in_list(my_list, idx, element):
+    n = len(my_list)
+    list = my_list[:]
+    if idx < 0 or idx > n - 1:
+        return list
+    for i in range(0, n):
+        if i == idx:
+            list[i] = element
+            return my_list
