@@ -2,7 +2,7 @@
 if __name__ == "__main__":
     import sys
     if len(sys.argv) == 1:
-        print("0", end=" ")
+        print("0", end="")
         print('')
     elif len(sys.argv) == 2:
         print("{:d}".format(int(sys.argv[1])), end="")
