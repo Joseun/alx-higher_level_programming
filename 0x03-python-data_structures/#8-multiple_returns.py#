@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+def multiple_returns(sentence):
+    word = 0
+    for i in sentence:
+        word += sentence[i]
+        first = word[0]
+        length = len(word)
+        return length, first
