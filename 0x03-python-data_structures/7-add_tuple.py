@@ -6,8 +6,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
     for i in range(2):
         if n > i:
             new_tuple[i] += tuple_a[i]
-        else: 0
-        if m > i:
-            new_tuple[i] += tuple_b[i]
-        else: 0
-    return tuple(new_tuple)
+            elif m > i:
+                new_tuple[i] += tuple_b[i]
+        return tuple(new_tuple)
