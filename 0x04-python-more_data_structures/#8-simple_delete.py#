@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+def simple_delete(a_dictionary, key=""):
+    n = list(a_dictionary)
+    new_dict = a_dictionary.copy()
+    for i in n:
+        if i == key:
+            del new_dict[i]
+            return _di
