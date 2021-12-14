@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+"""Addition function"""
+
+def add_integer(a, b=98):
+    """Return the result of a and b in integer or float.
+
+    >>> add_integer(10, 98)
+    108
+
+    Addition with floats.
+    >>> add_integer(10.8, 98)
+    108
+    >>> add_integer("red", 98)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    >>> add_integer(98, "six")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+     """
+    if type(a) is float:
+        a = int(a)
+    if type(b) is float:
+        b = int(b)
+    if not type(a) is int:
+        raise TypeError("a must be an integer")
+    if not type(b) is int:
+        raise TypeError("b must be an integer")
+    return a + b
