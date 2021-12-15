@@ -1,0 +1,36 @@
+===============================
+ How to Use 5-text_indentation.py
+===============================
+
+This library is very simple, since it only has one function called
+``text_indentation()``.
+
+Strings
+=======
+
+``text_indentation()`` prints a text placing a new line at delimiters ".", "?",
+		       ":".
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("I am, a fine boy: even if I? haven't seen her. Yet.")
+    I am, a fine boy:
+    <BLANKLINE>
+    even if I?
+    <BLANKLINE>
+    haven't seen her.
+    <BLANKLINE>
+    Yet.
+    <BLANKLINE>
+    
+Non-Strings
+===========
+
+``text_indentation()`` raises a TypeError if the argument is not a strings
+
+::
+
+    >>> text_indentation(100000)
+    Traceback (most recent call last):
+    TypeError: text must be a string
