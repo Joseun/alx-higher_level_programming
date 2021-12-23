@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """JSON reconversion to objects"""
-
-
 import json
+
 
 def from_json_string(my_str):
     """A function that returns a JSON representation of an object back to
