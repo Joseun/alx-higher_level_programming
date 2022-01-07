@@ -29,9 +29,9 @@ class Square(Rectangle):
         """:obj:'int': Changes the height of the square class"""
 
         if not type(value) is int:
-            raise TypeError('size must be an integer')
+            raise TypeError('width must be an integer')
         elif value <= 0:
-            raise ValueError('size must be > 0')
+            raise ValueError('width must be > 0')
         self.width = value
         self.height = value
 
