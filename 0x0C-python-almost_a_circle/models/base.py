@@ -8,7 +8,6 @@ class Base:
 
     __nb_objects = 0
 
-
     def __init__(self, id=None):
         """This is the initialiazation function for Base
 
@@ -18,7 +17,7 @@ class Base:
         """
 
         self.id = id
-        if self.id == None:
+        if self.id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
@@ -35,7 +34,7 @@ class Base:
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         if (type(list_dictionaries) != list or
-            not all(type(x) == dict for x in list_dictionaries)):
+                not all(type(x) == dict for x in list_dictionaries)):
             raise TypeError("list_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
 
@@ -67,7 +66,8 @@ class Base:
         if list_objs is None or list_objs == []:
             my_list = "[]"
         else:
-            my_list = cls.to_json_string([x.to_dictionary() for x in list_objs])
+            my_list = cls.to_json_string([x.to_dictionary()
+                                          for x in list_objs])
         filename = cls.__name__ + ".json"
         with open(filename, 'w') as f:
             f.write(my_list)
@@ -82,7 +82,7 @@ class Base:
         """
 
         if dictionary and dictionary != {}:
-            if cls.__name__ =="Rectangle":
+            if cls.__name__ == "Rectangle":
                 dummy = cls(1, 1)
             else:
                 dummy = cls(1)

@@ -128,8 +128,9 @@ class Rectangle(Base):
     def __str__(self):
         """Returns to standard output the details of the rectangle"""
 
-        return str("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
-                                        self.__y, self.__width, self.__height))
+        return str("[Rectangle] ({}) {}/{} - {}/{}".
+                   format(self.id, self.__x, self.__y, self.__width,
+                          self.__height))
 
     def update(self, *args, **kwargs):
         """Updating the attributes of the Rectangle class

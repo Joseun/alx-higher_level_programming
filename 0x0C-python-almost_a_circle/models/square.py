@@ -39,7 +39,7 @@ class Square(Rectangle):
         """Returns to standard output the details of the square"""
 
         return str("[Square] ({}) {}/{} - {}".format(self.id, self.x,
-                                        self.y, self.size))
+                                                     self.y, self.size))
 
     def update(self, *args, **kwargs):
         """Updating the attributes of the Square class
