@@ -16,7 +16,7 @@ import os
 class TestBase(unittest.TestCase):
     """
     Class of functions to run tests
-    """
+
     def setUp(self):
         """
         function to redirect stdout
@@ -36,7 +36,7 @@ class TestBase(unittest.TestCase):
         p8 = pep8.StyleGuide(quiet=True)
         p = p8.check_files(['models/base.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
-        
+
     def test_pep8_test(self):
         """
         Tests for pep8 test
@@ -44,7 +44,7 @@ class TestBase(unittest.TestCase):
         p8 = pep8.StyleGuide(quiet=True)
         p = p8.check_files(['tests/test_models/test_base.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
-    
+
     def test_docstrings(self):
         self.assertIsNotNone(module_doc)
         self.assertIsNotNone(Base.__doc__)
@@ -60,7 +60,7 @@ class TestBase(unittest.TestCase):
         self.assertIsNotNone(Base.save_to_file.__doc__)
         self.assertIs(hasattr(Base, "load_from_file"), True)
         self.assertIsNotNone(Base.load_from_file.__doc__)
-        
+        """
     def test_id(self):
         """
         Test check for id
@@ -76,7 +76,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b3.id, 3)
         self.assertEqual(b4.id, 12)
         self.assertEqual(b5.id, 4)
-        
+
     def test_from_json_string(self):
         """
         Test check from json string
