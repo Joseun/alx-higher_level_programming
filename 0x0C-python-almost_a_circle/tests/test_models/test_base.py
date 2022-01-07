@@ -32,7 +32,6 @@ class TestBase(unittest.TestCase):
         """
         Test check for id
         """
-        Base._Base__nb_objects = 0
         b1 = Base()
         b2 = Base()
         b3 = Base()
