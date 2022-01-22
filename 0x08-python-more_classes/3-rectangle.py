@@ -75,10 +75,14 @@ class Rectangle:
         """:obj:'int': Prints in standard outpur a square with the character #
 
         """
-
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("{}".format("#"), end="")
-            if i != self.__height - 1:
-                print('')
-        return ''
+        if self.__width == 0:
+            return ''
+        elif self.__height == 0:
+            return ''
+        else:
+            for i in range(self.__height):
+                for j in range(self.__width):
+                    print("{}".format("#"), end="")
+                if i != self.__height - 1:
+                    print('')
+            return ''
