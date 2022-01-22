@@ -14,10 +14,6 @@ class Rectangle:
         Returns a new Rectangle instance with width == height == size
         """
 
-        if not type(size) is int:
-            raise TypeError('size must be an integer')
-        width = size
-        height = size
         return cls(width, height)
 
     def __init__(self, width=0, height=0):
