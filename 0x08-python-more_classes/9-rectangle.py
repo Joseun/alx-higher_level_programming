@@ -18,8 +18,9 @@ class Rectangle:
             raise TypeError('size must be an integer')
         elif size < 0:
             raise ValueError('size must be >= 0')
-        #width = size
-        #height = size
+        """ width = size
+        height = size
+        """
         return cls(size, size)
 
     def __init__(self, width=0, height=0):
