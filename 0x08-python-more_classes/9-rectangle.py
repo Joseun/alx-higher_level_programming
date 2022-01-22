@@ -14,7 +14,7 @@ class Rectangle:
         Returns a new Rectangle instance with width == height == size
         """
 
-        return cls(width, height)
+        return cls(size, size)
 
     def __init__(self, width=0, height=0):
         """This is an empty class that defines a square of size 'size
