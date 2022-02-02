@@ -2,5 +2,5 @@
 --- in a database on the MySQL server.
 SELECT `score`, `name`
 FROM `second_table`
-WHERE `score` >= 10
-ORDER BY DESC `score`;
+WHERE `score` > 9
+ORDER BY `score` DESC;
