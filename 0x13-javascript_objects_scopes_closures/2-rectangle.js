@@ -1,9 +1,7 @@
 #!/usr/bin/node
 module.exports = class Rectangle {
   constructor (w, h) {
-    if ((w < 1) || (h < 1)) {
-    } else if ((isNaN(w)) || (isNaN(h))) {
-    } else {
+    if ((w > 0) && (h > 0)) {
       this.width = w;
       this.height = h;
     }
