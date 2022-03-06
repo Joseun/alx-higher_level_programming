@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-""" Script that lists all all City objects from the database hbtn_0e_14_usa """
+""" Script that lists all all City objects
+	from the database hbtn_0e_14_usa 
+"""
 if __name__ == "__main__":
 	from sys import argv
-	from model_state import Base, State
-	from model_city import City
+	from model_city import Base, City, State
 	from sqlalchemy import create_engine
 	from sqlalchemy.orm import sessionmaker
 
