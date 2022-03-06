@@ -8,8 +8,6 @@ if __name__ == "__main__":
 	from model_state import Base, State
 	from sqlalchemy import create_engine
 	from sqlalchemy.orm import sessionmaker
-
-
 	engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'\
 							.format(argv[1], argv[2], argv[3]),\
 							pool_pre_ping=True)
@@ -17,7 +15,7 @@ if __name__ == "__main__":
 	Session = sessionmaker(bind=engine)
 	session = Session()
 
-	query = session.query(State).order_by(State.id).limit(1) # .first() also works
+	query = session.query(State).order_by(State.id).first() # .limit(1) also works
 	for state in query.all():
 		if state == []:
 			print('Nothing')
