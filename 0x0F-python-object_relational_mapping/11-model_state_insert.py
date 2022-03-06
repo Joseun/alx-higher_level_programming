@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Script that adds the State object “Louisiana” to the database hbtn_0e_6_usa """
+""" 
+    Script that adds the State object “Louisiana”
+    to the database hbtn_0e_6_usa 
+"""
 if __name__ == "__main__":
     from sys import argv
     from model_state import Base, State
