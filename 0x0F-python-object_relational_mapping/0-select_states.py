@@ -11,12 +11,13 @@ if __name__ == "__main__":
 		port=3306,
 		user=argv[1],
 		password=argv[2],
-		database=argv[3]
+		database=argv[3],
+		charset="utf8"
 	)
 	cur = conn.cursor()
 	cur.execute("SELECT * FROM states ORDER BY id ASC")
 	query_rows = cur.fetchall()
-	for rows in query_rows:
+	for row in query_rows:
 		print(row)
 	cur.close()
 	conn.close()
