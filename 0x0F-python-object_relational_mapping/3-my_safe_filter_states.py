@@ -9,11 +9,11 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv
     db = MySQLdb.connect(
-        host = "localhost",
-        port = 3306,
-        user = argv[1],
-        password = argv[2],
-        database = argv[3]
+        host="localhost",
+        port=3306,
+        user=argv[1],
+        password=argv[2],
+        database=argv[3]
     )
     cur = db.cursor()
     cur.execute("SELECT * FROM states")
