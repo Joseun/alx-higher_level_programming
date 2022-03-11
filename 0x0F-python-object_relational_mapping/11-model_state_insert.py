@@ -16,12 +16,12 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    new_state = State(name = 'Louisiana')
+    new_state = State(name='Louisiana')
     session.add(new_state)
     session.commit()
     query = session.query(State).order_by(State.id)
     for state in query.all():
-        if state.name == 'Louisiana':
+        if state.name=='Louisiana':
             print(state.id)
             break
     else:
