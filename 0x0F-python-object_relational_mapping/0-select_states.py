@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """ a script that lists all states from the database hbtn_0e_0_usa """
-
-
-if __name__ == "__main__":
-	import MySQLdb
-	from sys import argv
+import MySQLdb
+from sys import argv
+	
+	
+def select_state():	
 	conn = MySQLdb.connect(
 		host="localhost",
 		port=3306,
@@ -20,3 +20,6 @@ if __name__ == "__main__":
 		print('{}'.format(row))
 	cur.close()
 	conn.close()
+
+if __name__ == "__main__":
+	select_state()
