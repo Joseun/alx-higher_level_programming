@@ -9,15 +9,11 @@ from sys import argv
 
 def error_rcode():
     """ sends a request to the URL and displays the body of the response """
-    try:
-        response = requests.get(argv[1])
-        response.raise_for_status()
-    except requests.exceptions.HTTPError as e:
-        print('Error code: ', e.response.status_code)
-    except requests.exceptions.ConnectionError as e:
-        print('Index')
+    response = requests.get(argv[1])
+    status = response.status_code
+    if status >= 400:
+        print('Error code: {}'.format(status))
     else:
-        print(response.content)
-
+        print(response.text)
 if __name__ == "__main__":
     error_rcode()

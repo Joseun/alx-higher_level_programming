@@ -10,17 +10,11 @@ from sys import argv
 def error_code():
     """ sends a request to the URL and displays the body of the response """
     url = argv[1]
-    req = Request(url)
     try:
-        response = urlopen(req)
-    except HTTPError as e:
-        print('Error code: ', e.code)
-    except URLError as e:
-        print('Index')
-    else:
-        with urlopen(req) as response:
+        with urlopen(url) as response:
             the_page = response.read()
         print(the_page)
-
+    except HTTPError as e:
+        print('Error code: {}'.format(e.code))         
 if __name__ == "__main__":
     error_code()

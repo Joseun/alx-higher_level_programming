@@ -5,7 +5,7 @@ import urllib.request
 
 def fetch():
     """ fetches https://alx-intranet.hbtn.io/status """
-    req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
+    req = 'https://alx-intranet.hbtn.io/status'
     with urllib.request.urlopen(req) as response:
         the_page = response.read()
     s = "Body response:\n\t- type: {}\n\t- content: {}\n\t- utf8 content: {}"

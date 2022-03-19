@@ -9,21 +9,19 @@ from sys import argv
 def json_api():
     """sends a POST request to the passed URL with a letter as a parameter"""
     url = "http://0.0.0.0:5000/search_user"
-    if !argv[1]:
+    if len(argv) < 2:
         values = {'q': ""}
     else:
         values = {'q': argv[1]}
     r = requests.post(url, data=values)
-    req = requests.get(url)
     try:
-        req.json()
-    except requests.exceptions.JSONDecodeError:
-        print ("Not a valid JSON")
-    else:
-        if req.status_code == 204:
-            print ("No result")
+        response = req.json()
+        if response == {}:
+            print('No result")
         else:
-            print ('[{}] {}'.format(req.content.id, req.content.name))
+            print ('[{}] {}'.format(response.get('id'), response.get('name')))
+    except:
+        print("Not a valid JSON")
 
 if __name__ == "__main__":
     json_api()

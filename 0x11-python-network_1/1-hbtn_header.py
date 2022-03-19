@@ -8,8 +8,7 @@ from sys import argv
 
 def request_id():
     """ displays the value of the X-Request-Id variable """
-    req = urllib.request.Request(argv[1])
-    with urllib.request.urlopen(req) as response:
+    with urllib.request.urlopen(argv[1]) as response:
         the_page = response.info()
     print(the_page['X-Request-Id'])
 

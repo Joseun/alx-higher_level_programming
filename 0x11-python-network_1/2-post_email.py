@@ -16,7 +16,7 @@ def post_email():
     data = data.encode('utf-8')  # data should be bytes
     req = urllib.request.Request(url, data)
     with urllib.request.urlopen(req) as response:
-        the_page = response.read()
+        the_page = response.read().decode('utf-8')
     print(the_page)
 
 if __name__ == "__main__":

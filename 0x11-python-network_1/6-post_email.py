@@ -12,8 +12,7 @@ def post_emailr():
     url = argv[1]
     values = {'email': argv[2]}
     r = requests.post(url, data=values)
-    req = requests.get(argv[1])
-    print(req.content)
+    print(req.text)
 
 if __name__ == "__main__":
     post_emailr()
