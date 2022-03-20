@@ -15,11 +15,11 @@ def json_api():
         values = {'q': argv[1]}
     r = requests.post(url, data=values)
     try:
-        response = req.json()
+        response = r.json()
         if response == {}:
             print("No result")
         else:
-            print ('[{}] {}'.format(response.get('id'), response.get('name')))
+            print('[{}] {}'.format(response.get('id'), response.get('name')))
     except:
         print("Not a valid JSON")
 
