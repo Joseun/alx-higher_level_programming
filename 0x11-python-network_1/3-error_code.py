@@ -15,6 +15,6 @@ def error_code():
             the_page = response.read()
         print(the_page.decode('utf-8'))
     except HTTPError as e:
-        print('Error code: {}'.format(e.code)) 
+        print('Error code: {}'.format(e.code))
 if __name__ == "__main__":
     error_code()
