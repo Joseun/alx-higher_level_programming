@@ -3,7 +3,6 @@
     displays the body of the response (decoded in utf-8)
 """
 import requests
-from urllib.error import URLError, HTTPError
 from sys import argv
 
 
